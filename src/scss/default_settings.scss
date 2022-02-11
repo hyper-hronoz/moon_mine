@@ -1,0 +1,39 @@
+@import "./variables.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PT Sans", sans-serif;
+}
+
+html {
+    font-size: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;    
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.button {
+    color: #fff;
+    font-size: 1.4rem;
+    border-radius: 0.9rem;
+    padding: 1.5rem 4.4rem;
+    border: 1px solid $light;
+    background: $secondary_color;
+    background: $primary_gradient;
+    box-shadow: inset -1px -1px 1px $info; 
+}

@@ -1,0 +1,9 @@
+$primary_color: #5768FF;
+$secondary_color: #672FDE; 
+$light: #FFF;
+$dark: #000;
+$info: #F6EF3E;
+$primary_gradient: linear-gradient(0deg, rgba(103,47,222,1) 0%, rgba(87,104,255,1) 100%);
+$primary_gradient--reversed: linear-gradient(180deg, rgba(103,47,222,1) 0%, rgba(87,104,255,1) 100%);
+
+$break_points: ("medium": 1040px, "low": 740px);

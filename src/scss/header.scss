@@ -1,0 +1,137 @@
+@use "sass:map";
+@import "./variables.scss";
+
+.mobile-menu {
+    display: none;
+    z-index: 11000;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        padding: 0 2.8rem;
+    }
+
+    .menu {
+        &_item {
+            margin-right: 7.2rem;
+
+            &::after {
+                content: "";
+                display: block;
+                background: $light;
+                top: 2px;
+                left: 0;
+                width: 0%;
+                height: 2px;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                    transition: ease-in-out  0.1s;
+                }
+            }
+        }
+
+        &_item-link {
+            color: $light;
+            font-size: 1.4rem;
+        }
+    }
+
+    .navigation-bar {
+        padding: 0 2.8rem 0 7.2rem;
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: space-between;
+        background-image: url(../img/header_background.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+
+        &_menu {
+            display: flex;
+        }
+
+        &_authorization {
+            display: flex;
+            margin-left: auto;
+
+            > a {
+                margin-left: 2.8rem;
+
+                > button {
+                    &:hover {
+                        box-shadow: inset -2px -2px 0px $info; 
+                        font-size: 1.43rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: map.get($break_points, "medium")) { 
+    .menu {
+        position: fixed;
+        flex-direction: column;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url(../img/menu_background.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 10rem;
+        text-align: left;
+        overflow: auto;
+        width: 0px;
+        visibility: hidden;
+
+        &--active {
+            width: 100%;
+            visibility: visible;
+            transition: ease 0.2s;
+        }
+
+        &_item {
+            display: inline;
+            margin-bottom: 10rem;
+        }
+        
+        .link {
+            font-size: 2.1rem;
+        }
+    } 
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .mobile-menu--active {
+        position: fixed;
+        top: 2.6rem;
+        right: 2.2rem;
+    }
+}
+
+@media screen and (max-width: map.get($break_points, "low")) {
+    .navigation-bar {
+        justify-content: flex-end;
+    }
+    .mobile-menu {
+        margin-left: auto;
+        position: initial !important;
+    }
+    .authorization {
+        visibility: hidden;
+        display: none !important;
+    }
+ }
