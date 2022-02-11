@@ -51,6 +51,7 @@ gulp.task("js", async () =>
     .pipe(
       babel({
         presets: ["@babel/env"],
+        ignore: [ "./src/js/particles.min.js" ]
       })
     )
     .pipe(gulp.dest("./dist/js"))

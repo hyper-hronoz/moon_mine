@@ -20,11 +20,27 @@ a {
     cursor: pointer;
 }
 
+h1 {
+    font-size: 3.6rem;
+    font-weight: bold;
+}
+
 button {
     border: none;
     outline: none;
     cursor: pointer;
     white-space: nowrap;
+}
+
+#background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1;
 }
 
 .button {
@@ -36,4 +52,14 @@ button {
     background: $secondary_color;
     background: $primary_gradient;
     box-shadow: inset -1px -1px 1px $info; 
+
+    &:hover {
+        box-shadow: inset -2px -2px 0px $info; 
+    }
+}
+
+.container {
+    max-width: 1258px;
+    margin: 0 auto;
+    padding: 0 2.8rem;
 }

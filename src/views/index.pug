@@ -1,36 +1,17 @@
 doctype html
 html(lang="en")
     head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="./css/style.css")
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-        title Document
+        include ./templates/head.pug
     body 
-        header.header
-            .header_logo.logo
-                a(href="#") 
-                    image(src="./img/logo.svg").logo-image
-            nav.header_navigation-bar.navigation-bar
-                image(src="./img/menu.svg").navigation-bar_mobile-menu.mobile-menu
-                ul.navigation-bar_menu.menu
-                    li.menu_item.menu-item
-                        a(href="#").menu_item-link.link About
-                    li.menu_item.menu-item
-                        a(href="#").menu_item-link.link Equipment
-                    li.menu_item.menu-item
-                        a(href="#").menu_item-link.link Investment packages
-                .navigation-bar_authorization.authorization
-                    a(href="#")
-                        button.authorization_button.button Sign Up
-                    a(href="#")
-                        button.authorization_button.button Login
+        #background
 
-        section
-            .main.container
+        include ./templates/header.pug
+        include ./templates/main.pug
+        include ./templates/advantages.pug
+        include ./templates/about.pug
 
-        script(src="./js/script.js") 
+        include ./templates/scripts.pug
+
+
+
 

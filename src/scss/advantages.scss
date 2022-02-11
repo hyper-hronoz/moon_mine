@@ -1,0 +1,31 @@
+@import "./variables.scss";
+
+.advantages {
+    @extend .container;
+    padding: 0 !important;
+    position: relative;
+
+    > .container {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        top: -11.6rem;
+    }
+
+    .advantage {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 20.4rem;
+        height: 24rem;
+        background: url(../img/advantage_background.png) no-repeat center top / contain;
+
+        &_header {
+            color: $light;
+            font-size: 1.6rem;
+            margin-top: 0.8rem;
+        }
+    }
+}

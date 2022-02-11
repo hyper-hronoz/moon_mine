@@ -3,7 +3,7 @@
 
 .mobile-menu {
     display: none;
-    z-index: 11000;
+    z-index: 3;
     cursor: pointer;
 }
 
@@ -16,6 +16,9 @@
     }
 
     .menu {
+        &-item-authorization {
+            display: none;
+        }
         &_item {
             margin-right: 7.2rem;
 
@@ -64,13 +67,6 @@
 
             > a {
                 margin-left: 2.8rem;
-
-                > button {
-                    &:hover {
-                        box-shadow: inset -2px -2px 0px $info; 
-                        font-size: 1.43rem;
-                    }
-                }
             }
         }
     }
@@ -92,7 +88,8 @@
         padding-left: 10rem;
         text-align: left;
         overflow: auto;
-        width: 0px;
+        width: 0%;
+        z-index: 2;
         visibility: hidden;
 
         &--active {
@@ -103,11 +100,12 @@
 
         &_item {
             display: inline;
-            margin-bottom: 10rem;
+            white-space: nowrap;
+            margin-top: 4rem;
         }
         
         .link {
-            font-size: 2.1rem;
+            font-size: 1.6rem;
         }
     } 
 
@@ -129,6 +127,9 @@
     .mobile-menu {
         margin-left: auto;
         position: initial !important;
+    }
+    .menu-item-authorization {
+        display: block !important;
     }
     .authorization {
         visibility: hidden;

@@ -1,0 +1,36 @@
+@import "./variables.scss";
+
+.main {
+    display: flex;
+    align-items: center;
+    margin-top: 6rem;
+    margin-bottom: 13rem;
+    position: relative;
+
+    &_background {
+        margin-left: auto;
+        > img {
+            width: 100%;
+        }
+    }
+
+    .main-info {
+        position: absolute;
+        z-index: 1;
+        max-width: 71.9rem;
+
+        &_description {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-top: 3rem;
+            max-width: 59.1rem;
+        }
+
+        &_actions {
+            margin-top: 3rem;
+            .button {
+                margin-right: 3rem;
+            }
+        }
+    }
+}
