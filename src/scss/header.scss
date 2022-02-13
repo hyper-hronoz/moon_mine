@@ -10,9 +10,27 @@
 .header {
     display: flex;
     justify-content: space-between;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 10;
 
     .logo {
         padding: 0 2.8rem;
+        background: $light;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            width: 5rem;
+            right: -5rem;
+            bottom: 0;
+            background: $light;
+        }
     }
 
     .menu {
@@ -48,6 +66,7 @@
 
     .navigation-bar {
         padding: 0 2.8rem 0 7.2rem;
+        z-index: 2;
         display: flex;
         flex-grow: 1;
         align-items: center;

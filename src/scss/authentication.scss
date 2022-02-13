@@ -1,0 +1,72 @@
+@import "./variables.scss";
+@import "./default_settings.scss";
+
+.sign-up {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url("../img/authentication_background.png");
+
+    &_left-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-grow: 1; 
+
+
+        .left-info_wrapper {
+            color: $light;
+            text-align: left;
+            > p {
+                margin-top: 2.2rem;
+            }
+        }
+    }
+    &_authentication-form {
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        flex-grow: 1; 
+        background: $light;
+        padding-left: 15rem;
+        padding-right: 15rem;
+        align-self: stretch;
+    }
+
+}
+
+.authentication-form-field {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.3rem;
+
+    .authentication-form_label {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.authentication-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 41.8rem;
+    width: 100%;
+
+    .form {
+        &-input {
+            align-self: stretch;
+            flex-grow: 1;
+            width: 100%;
+            height: 4.8rem;
+            border: 1px solid $secondary_color;
+            border-radius: 3px;
+            padding: 1.5rem 2rem;
+        }
+        &-button {
+            align-self: stretch;
+            @extend .button;
+            width: 100%;
+        }
+    }
+}

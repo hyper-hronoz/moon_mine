@@ -7,7 +7,7 @@ const autoprefixer = require("gulp-autoprefixer");
 const imagemin = require('gulp-imagemin')
 
 
-const gulp_files = ["pug", "scss", "js", "image"];
+const gulp_files = ["pug", "scss", "js"];
 
 const pug_files = "./src/views/**/*.pug";
 const scss_files = "./src/scss/**/*.scss";

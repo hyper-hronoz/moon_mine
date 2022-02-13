@@ -25,6 +25,16 @@ h1 {
     font-weight: bold;
 }
 
+h2 {
+    font-size: 3.2rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
 button {
     border: none;
     outline: none;
@@ -62,4 +72,9 @@ button {
     max-width: 1258px;
     margin: 0 auto;
     padding: 0 2.8rem;
+}
+
+.description {
+    font-size: 1.6rem;
+    font-weight: bold;
 }
