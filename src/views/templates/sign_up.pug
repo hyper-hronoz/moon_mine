@@ -1,22 +1,23 @@
-section.sign-up
-    .sign-up_left-info.left-info
+section.authentication
+    .authentication_left-info.left-info
         .left-info_wrapper
             h1 Weclome to Moon Mine
             p.description Get your free 1324TRHS as a gift
-    .sign-up_authentication-form
-        .authentication-form
+    .authentication_form
+        form.form
             h2.authentaication-form_header Sign Up
-            .authentaication-form_password.authentication-form-field
-                lable.authentication-form_label Email
-                input(placeholder="Email").authentication-from_input.form-input
-            .authentaication-form_password.authentication-form-field
-                lable.authentication-form_label Password
-                input(placeholder="Password").authentication-from_input.form-input
-            .authentaication-form_password.authentication-form-field
-                lable.authentication-form_label Repeat your password
-                input(placeholder="Password again" ).authentication-from_input.form-input
-            .authentication-form_agreementa.authentication-form-field
+            .form_field
+                lable.form_label Email
+                input(placeholder="Email").form_input
+            .form_field
+                lable.form_label Password
+                input(placeholder="Password").form_input
+            .form_field
+                lable.form_label Repeat your password
+                input(placeholder="Password again" ).form_input
+            .form_field.form_field--row
+                input(type="checkbox").form_checkbox
                 span I have read and agree to the <a href="#"> Terms of Use </a>
-            a(href="").authentication-form-field
-                button.form-button Sign Up
+            a(href="").form_field
+                button.form_button Sign Up
             

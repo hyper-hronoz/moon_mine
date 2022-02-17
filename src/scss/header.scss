@@ -2,71 +2,62 @@
 @import "./variables.scss";
 
 .mobile-menu {
-    display: none;
     z-index: 3;
+    display: none;
     cursor: pointer;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 10;
+.logo {
+    padding: 0 2.8rem;
+    background: $light;
+    position: relative;
 
-    .logo {
-        padding: 0 2.8rem;
+    &::after {
+        content: "";
+        display: block;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        width: 5rem;
+        right: -5rem;
+        bottom: 0;
         background: $light;
-        position: relative;
+    }
+}
+
+.menu {
+    &_item {
+        margin-right: 7.2rem;
+
+        &--authorization {
+            display: none;
+        }
 
         &::after {
             content: "";
             display: block;
-            z-index: 1;
-            position: absolute;
-            top: 0;
-            width: 5rem;
-            right: -5rem;
-            bottom: 0;
             background: $light;
+            top: 2px;
+            left: 0;
+            width: 0%;
+            height: 2px;
         }
-    }
 
-    .menu {
-        &-item-authorization {
-            display: none;
-        }
-        &_item {
-            margin-right: 7.2rem;
-
+        &:hover {
             &::after {
-                content: "";
-                display: block;
-                background: $light;
-                top: 2px;
-                left: 0;
-                width: 0%;
-                height: 2px;
+                width: 100%;
+                transition: ease-in-out  0.1s;
             }
-
-            &:hover {
-                &::after {
-                    width: 100%;
-                    transition: ease-in-out  0.1s;
-                }
-            }
-        }
-
-        &_item-link {
-            color: $light;
-            font-size: 1.4rem;
         }
     }
 
-    .navigation-bar {
-        padding: 0 2.8rem 0 7.2rem;
-        z-index: 2;
+    &_item-link {
+        color: $light;
+        font-size: 1.4rem;
+    }
+}
+
+.navigation-bar {
         display: flex;
         flex-grow: 1;
         align-items: center;
@@ -88,6 +79,20 @@
                 margin-left: 2.8rem;
             }
         }
+    }
+
+.header {
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+
+
+    &_navigation-bar {
+        z-index: 2;
+        padding: 0 2.8rem 0 7.2rem;
     }
 }
 
@@ -121,10 +126,10 @@
             display: inline;
             white-space: nowrap;
             margin-top: 4rem;
-        }
-        
-        .link {
-            font-size: 1.6rem;
+
+            &--authorization {
+                display: block;
+            }
         }
     } 
 

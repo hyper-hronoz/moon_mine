@@ -4,7 +4,7 @@
     position: relative;
     padding: 10.6rem 0 11rem 0;
 
-    > .container {
+    &_wrapper {
         display: flex;
         align-items: center;
     }
@@ -15,22 +15,25 @@
             width: 100%;
         }
     }
+}
 
-    .main-info {
-        position: absolute;
-        z-index: 1;
-        max-width: 71.9rem;
+.main-info {
+    position: absolute;
+    z-index: 1;
+    max-width: 71.9rem;
 
-        &_description {
-            margin-top: 3rem;
-            max-width: 59.1rem;
-        }
+    &_header {
+        margin-bottom: 3rem;
+    }
 
-        &_actions {
-            margin-top: 3rem;
-            .button {
-                margin-right: 3rem;
-            }
+    &_description {
+        max-width: 59.1rem;
+        margin-bottom: 3rem;
+    }
+
+    &_actions {
+        .button {
+            margin-right: 3rem;
         }
     }
 }

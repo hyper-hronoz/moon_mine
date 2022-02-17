@@ -3,4 +3,44 @@
 .about {
     background: $primary_gradient;
     padding: 17rem 0 0 0;
+
+    &_picture {
+        margin-right: 16rem;
+    }
+
+    &_wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_icon {
+        width: 4rem;
+        height: 4rem;
+        margin-right: 4rem;
+    }
+
+    &_content {
+        color: $light;
+    }
+
+    &_heading {
+        margin-bottom: 6.7rem;
+    }
+
+    &_item {
+        display: flex;
+        margin-bottom: 4.4rem;
+
+
+        &-text-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-heading {
+            font-size: 2.7rem;
+            font-weight: bold;
+            margin-bottom: 1.6rem;
+        }
+    }
 }
