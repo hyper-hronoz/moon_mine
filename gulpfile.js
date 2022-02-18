@@ -14,15 +14,15 @@ const scss_files = "./src/scss/**/*.scss";
 const js_files = "./src/js/**/*.js";
 
 gulp.task("serve", async function () {
-  browserSync.init({
-    server: "./dist",
-  });
+  // browserSync.init({
+  //   server: "./dist",
+  // });
 
   gulp.watch(
     [pug_files, scss_files, js_files],
     gulp.series("pug", "scss", "js")
   );
-  gulp.watch("dist/**/*").on("change", browserSync.reload);
+  // gulp.watch("dist/**/*").on("change", browserSync.reload);
 });
 
 gulp.task("pug", async () => {

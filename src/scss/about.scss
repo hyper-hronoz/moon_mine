@@ -11,6 +11,7 @@
     &_wrapper {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 11rem;
     }
 
     &_icon {
@@ -25,12 +26,28 @@
 
     &_heading {
         margin-bottom: 6.7rem;
+
+        > span {
+            color: $info;
+        }
     }
 
     &_item {
         display: flex;
-        margin-bottom: 4.4rem;
+        padding-bottom: 4.4rem;
+        position: relative;
+        z-index: 2;
 
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 4rem;
+            bottom: 0;
+            left: 1.8rem;
+            border-left: 5px dotted $light;
+            z-index: -2;
+        }
 
         &-text-wrapper {
             display: flex;
@@ -38,9 +55,29 @@
         }
 
         &-heading {
-            font-size: 2.7rem;
-            font-weight: bold;
-            margin-bottom: 1.6rem;
+            margin-bottom: 1.2rem;
         }
+    }
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+
+    &_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 3.8rem 4.5rem;
+        background: $primary_gradient;
+        border-radius: 2rem;
+        color: $light;
+        border: 0.3rem solid $primary_color;
+        box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.7), -8px -7px 5px 2px rgba(0, 0, 0, 0.47) inset;
+    }
+
+    &_heading {
+        margin-bottom: 1rem;
     }
 }
